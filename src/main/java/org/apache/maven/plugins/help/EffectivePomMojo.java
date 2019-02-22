@@ -265,7 +265,7 @@ public class EffectivePomMojo
                 s = source.toString();
             }
 
-            return '}' + s + ", line " + location.getLineNumber() + ' ';
+            return '}' + s + ( ( location.getLineNumber() >= 0 ) ? ", line " + location.getLineNumber() : "" ) + ' ';
         }
     }
 }
